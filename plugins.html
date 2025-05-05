@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogAnalyzer - 内置插件</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .plugin-section {
+            padding: 5rem 2rem;
+            background: var(--background);
+        }
+        
+        .plugin-section h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+        }
+        
+        .plugin-card {
+            background: var(--light-background);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .plugin-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+        
+        .plugin-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .plugin-icon {
+            font-size: 2.5rem;
+            margin-right: 1rem;
+            color: var(--primary-color);
+        }
+        
+        .plugin-title {
+            margin: 0;
+            color: var(--primary-color);
+            font-size: 1.8rem;
+        }
+        
+        .plugin-description {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .plugin-features {
+            margin-bottom: 1.5rem;
+        }
+        
+        .plugin-features h4 {
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+        
+        .plugin-features ul {
+            padding-left: 1.5rem;
+        }
+        
+        .plugin-features li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .plugin-usage {
+            background: rgba(37, 99, 235, 0.05);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .plugin-usage h4 {
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+        
+        .plugin-usage code {
+            background: rgba(0, 0, 0, 0.05);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <nav>
+            <div class="logo">LogAnalyzer</div>
+            <div class="nav-links">
+                <a href="index.html#features">功能</a>
+                <a href="document.html">文档</a>
+                <a href="plugins.html">内置插件</a>
+                <a href="plugin-development.html">插件开发</a>
+                <a href="https://github.com/xclouder/log-analyzer/releases">下载</a>
+            </div>
+        </nav>
+        <div class="hero-content">
+            <h1>LogAnalyzer 内置插件</h1>
+            <p class="subtitle">扩展日志分析工具的功能</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="plugin-section">
+            <h2>内置插件</h2>
+            
+            <div class="plugin-card">
+                <div class="plugin-header">
+                    <div class="plugin-icon">🔗</div>
+                    <h3 class="plugin-title">OpenLog From URL</h3>
+                </div>
+                <div class="plugin-description">
+                    <p>此插件允许用户直接从URL下载并打开日志文件，支持压缩文件的自动解压缩和文件选择功能。</p>
+                </div>
+                <div class="plugin-features">
+                    <h4>主要功能：</h4>
+                    <ul>
+                        <li>从远程URL下载日志文件</li>
+                        <li>自动解压缩支持的压缩文件格式（.zip, .tar, .gz, .tar.gz, .7z）</li>
+                        <li>提供文件选择界面，让用户选择要打开的日志文件</li>
+                    </ul>
+                </div>
+                <div class="plugin-usage">
+                    <h4>使用方法：</h4>
+                    <p>1. 通过命令面板输入 <code>openLogFromUrl</code></p>
+                    <p>2. 在弹出的输入框中输入日志文件的URL</p>
+                    <p>3. 如果下载的是压缩文件，插件会自动解压并显示文件列表供选择</p>
+                    <p>4. 选择要打开的文件，LogAnalyzer将自动加载并分析该日志文件</p>
+                </div>
+            </div>
+            
+            <!-- 可以在此处添加更多插件卡片 -->
+            
+        </section>
+
+        <section class="plugin-section" style="background: var(--light-background);">
+            <h2>插件系统</h2>
+            <div class="plugin-card">
+                <div class="plugin-description">
+                    <p>LogAnalyzer提供了强大的插件系统，允许开发者扩展和定制日志分析工具的功能。插件API提供了丰富的接口，使开发者能够：</p>
+                </div>
+                <div class="plugin-features">
+                    <ul>
+                        <li>创建自定义命令和UI界面</li>
+                        <li>处理和转换日志文件</li>
+                        <li>添加新的分析功能</li>
+                        <li>与外部系统和服务集成</li>
+                        <li>...</li>
+                    </ul>
+                </div>
+                <div class="plugin-usage">
+                    <h4>了解更多：</h4>
+                    <p>如果您对开发自己的插件感兴趣，请查看我们的<a href="plugin-development.html">插件开发文档</a>，了解详细的API参考和示例。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>关于</h4>
+                <p>LogAnalyzer 是一个开源的日志分析工具，致力于提供基础且实用的日志分析功能。</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 LogAnalyzer</p>
+        </div>
+    </footer>
+    <div id="commandOverlay" class="command-overlay"></div>
+    <div id="commandPalette" class="command-palette">
+        <input type="text" id="commandInput" class="command-palette-input" placeholder="输入命令...">
+        <div id="commandList" class="command-list"></div>
+    </div>
+    <script src="command-palette.js"></script>
+    <script>
+        window.commandPalette = new CommandPalette();
+    </script>
+</body>
+</html>

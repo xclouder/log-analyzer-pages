@@ -6,53 +6,105 @@
     <title>LogAnalyzer - 使用文档</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
-        .doc-content {
-            max-width: 1200px;
-            margin: 0 auto;
+        .plugin-section {
+            padding: 5rem 2rem;
+            background: var(--background);
+        }
+        
+        .plugin-section h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+        }
+        
+        .plugin-card {
+            background: var(--light-background);
+            border-radius: var(--border-radius);
             padding: 2rem;
-            padding-top: 6rem;
-        }
-        .doc-section {
             margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
         }
+        
+        .plugin-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+        
+        .plugin-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .plugin-icon {
+            font-size: 2.5rem;
+            margin-right: 1rem;
+            color: var(--primary-color);
+        }
+        
+        .plugin-title {
+            margin: 0;
+            color: var(--primary-color);
+            font-size: 1.8rem;
+        }
+        
         .shortcut-table {
             width: 100%;
             border-collapse: collapse;
-            margin: 1rem 0;
+            margin: 1.5rem 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            border-radius: var(--border-radius);
+            overflow: hidden;
         }
+        
         .shortcut-table th, .shortcut-table td {
-            padding: 0.5rem;
-            border: 1px solid #ddd;
+            padding: 1rem;
+            border: none;
             text-align: left;
         }
-        .shortcut-table th {
-            background-color: #f5f5f5;
+        
+        .shortcut-table tr {
+            border-bottom: 1px solid #eee;
         }
-        .hero {
-            background: #f5f5f5;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
+        
+        .shortcut-table th {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            font-weight: 600;
         }
     </style>
 </head>
 <body>
-    <header class="hero" style="min-height: auto; padding: 1rem;">
+    <header class="hero">
         <nav>
             <div class="logo">LogAnalyzer</div>
             <div class="nav-links">
-                <a href="index.html">首页</a>
+                <a href="index.html#features">功能</a>
+                <a href="document.html">文档</a>
+                <a href="plugins.html">内置插件</a>
                 <a href="plugin-development.html">插件开发</a>
+                <a href="https://github.com/xclouder/log-analyzer/releases">下载</a>
             </div>
         </nav>
+        <div class="hero-content">
+            <h1>LogAnalyzer 使用文档</h1>
+            <p class="subtitle">了解如何使用日志分析工具</p>
+        </div>
     </header>
 
-    <main class="doc-content">
-        <h1>LogAnalyzer 使用文档</h1>
-        
-        <div class="doc-section">
-            <h2>基础功能</h2>
+    <main>
+        <section class="plugin-section">
+            <h2>使用文档</h2>
+            
+            <div class="plugin-card">
+                <div class="plugin-header">
+                    <div class="plugin-icon">🔍</div>
+                    <h3 class="plugin-title">基础功能</h3>
+                </div>
             <h3>1. 文本搜索和过滤</h3>
             <ul>
                 <li>支持普通文本搜索：直接输入关键词进行匹配</li>
@@ -73,18 +125,24 @@
                 <li>支持导入之前保存的过滤器设置</li>
                 <li>支持拖拽导入配置文件（按住Ctrl拖拽可保留现有配置）</li>
             </ul>
-        </div>
+            </div>
 
-        <div class="doc-section">
-            <h2>插件系统</h2>
+            <div class="plugin-card">
+                <div class="plugin-header">
+                    <div class="plugin-icon">🔗</div>
+                    <h3 class="plugin-title">插件系统</h3>
+                </div>
             <ul>
                 <li>支持通过插件扩展功能</li>
                 <li>可以开发自定义插件来扩展功能</li>
             </ul>
-        </div>
+            </div>
 
-        <div class="doc-section">
-            <h2>快捷键</h2>
+            <div class="plugin-card">
+                <div class="plugin-header">
+                    <div class="plugin-icon">⌨️</div>
+                    <h3 class="plugin-title">快捷键</h3>
+                </div>
             <table class="shortcut-table">
                 <thead>
                     <tr>
@@ -107,17 +165,21 @@
                     </tr>
                 </tbody>
             </table>
-        </div>
+            </div>
 
-        <div class="doc-section">
-            <h2>使用技巧</h2>
+            <div class="plugin-card">
+                <div class="plugin-header">
+                    <div class="plugin-icon">💡</div>
+                    <h3 class="plugin-title">使用技巧</h3>
+                </div>
             <ul>
                 <li>双击过滤结果中的行可以跳转到原始日志中的对应位置</li>
                 <li>支持在过滤结果和原始日志之间快速切换</li>
                 <li>使用命令面板可以快速访问所有功能</li>
                 <li>配置文件支持拖拽导入，方便快速应用保存的设置</li>
             </ul>
-        </div>
+            </div>
+        </section>
     </main>
 
     <footer>

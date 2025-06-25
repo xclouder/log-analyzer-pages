@@ -57,7 +57,7 @@ nav {
 .hero {
     background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
     color: white;
-    padding: 8rem 2rem 6rem;
+    padding: 6rem 2rem 0.5rem;
     text-align: center;
 }
 
